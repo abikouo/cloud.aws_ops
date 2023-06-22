@@ -11,4 +11,4 @@ jobs:
   ansible-lint:
     uses: abikouo/github_actions/.github/workflows/ansible-lint.yml@ansible_lint_versionning
     with:
-      action_ref: v6.15.0
+      ansible_lint_version: v6.15.0
