@@ -9,10 +9,6 @@ name: Linters
 jobs:
 
   ansible-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Run ansible-lint
-        uses: ansible/ansible-lint-action@v6.15.0
+    uses: abikouo/github_actions/.github/workflows/ansible-lint.yml@ansible_lint_versionning
+    with:
+      action_ref: v6.15.0
