@@ -11,6 +11,10 @@
       security_token: "{{ security_token | default(omit) }}"
       region: "{{ region }}"
   block:
+    - name: Display image filters
+      ansible.builtin.debug:
+        var: image_filter
+
     - name: Get image ID to create an instance
       amazon.aws.ec2_ami_info:
         filters:
